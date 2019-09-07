@@ -1,0 +1,51 @@
+<!doctype html>
+{% load staticfiles %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, , initial-scale=1.0>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forms</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1> Navbar</h1>
+    <div class="container">
+        <div class="jumbotron" style="background-color:lightslategrey">
+  <h1 class="display-8 jumbotron-heading" >Contact us</h1>
+            <nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="background-color: darkslategray">
+    <li class="breadcrumb-item " >You are in : Home / Pages / Contact us</li>
+  </ol>
+</nav>
+        </div>
+        <hr class="headrow">
+        <h2>Reach Out To Us :-</h2>
+        <hr class="headrow">
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4"></div>
+          <div class = 'djangoform'>
+          <form class = 'form-group form-control-sm' method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+               <input type="submit" class = "btn btn-primary button" value="Submit">
+          </form>
+          </div>
+          <aside >
+              <hr>
+              <h3><strong>Contact Details</strong></h3>
+              <hr><br>
+              <p><strong>Address :#4, Ground Floor,Srigandhakaval,
+                  Magadi Main Road, Sunkadakatte,
+                  Bengaluru-560091.</strong></p>
+              <p><strong>Email: Shakthien95@gmail.com</strong><p>
+              <strong>Phone: +91-9902149334</strong></p></aside>
+    </div>
+        <footer>© Copyrights SHAKTHI ENGINEERING ENTERPRISE. All rights reserved.</footer>
+</body>
+</html>
